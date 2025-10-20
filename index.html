@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Diwali Card</title>
+  <style>
+    body {
+      background: #232946;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .diwali-card {
+      background: linear-gradient(135deg, #c5bdbd 0%, #fff3f3 100%);
+      width: 370px;
+      padding: 32px 24px 24px 24px;
+      border-radius: 24px;
+      box-shadow: 0 6px 32px 0 rgb(255, 233, 38);
+      position: relative;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: #232946;
+      overflow: hidden;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1) all 0.6s;
+     animation: alternate-reverse glow 5s infinite;
+
+    }
+    .diwali-card:hover {
+        box-shadow: 0 12px 48px 0 rgb(190, 184, 123);
+    }
+    .diya-svg {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 16px;
+      display: inline-block;
+     animation: alternate-reverse glow 5s infinite;
+    }
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 3px #e4cc44); }
+      to   { filter: drop-shadow(0 0 24px #fffac6); }
+    }
+    .card-title {
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 0 0 8px 0;
+      text-shadow: 1px 2px 9px #d3c747 ;
+    }
+    #typed {
+      font-size: 2rem;
+      line-height: 1.5;
+      display: inline-block;
+      max-width: 100%;
+      text-shadow: 1px 1px 6px #fff3a2;
+
+    }
+    .card-footer {
+      font-size: 1rem;
+      color: #e96443;
+      font-weight: 500;
+      margin-top: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="diwali-card">
+    <svg class="diya-svg" viewBox="0 0 64 64">
+      <ellipse cx="32" cy="46" rx="20" ry="8" fill="#E96443"/>
+      <ellipse cx="32" cy="43" rx="16" ry="6" fill="#FFD700"/>
+      <ellipse cx="32" cy="28" rx="7" ry="16" fill="#ffd700"/>
+      <ellipse cx="32" cy="21" rx="3.5" ry="6" fill="#fff3a2"/>
+      <ellipse cx="32" cy="11" rx="2" ry="4" fill="#ff9800"/>
+    </svg>
+    <div class="card-title">Happy Diwali!</div>
+    <div class="card-message">
+     <span id="typed"></span>
+    </div>
+    <div class="card-footer">
+      — From Your Friend
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script >
+    var typed = new Typed('#typed', {
+      strings: ["Wishing you a Diwali filled with joy, prosperity, and sparkling moments!"],
+      typeSpeed: 40,
+      backSpeed: 20,
+      loop: true,
+      backDelay: 1000,
+     
+    });
+  </script>
+</body>
+</html>
